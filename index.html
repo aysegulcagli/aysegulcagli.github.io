@@ -1,143 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayşegül Çağlı - Portfolio</title>
   <style>
+    :root {
+      --primary: #6a11cb;
+      --secondary: #2575fc;
+      --text-dark: #333;
+      --text-light: #fff;
+      --bg-light: #f9f9f9;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      scroll-behavior: smooth;
     }
+
     header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      padding: 60px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--text-light);
+      padding: 80px 20px;
       text-align: center;
+      position: relative;
     }
+
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin: 0;
+      animation: fadeIn 1s ease;
     }
+
     header p {
       font-size: 1.2rem;
       margin-top: 10px;
+      opacity: 0.9;
+      animation: fadeIn 2s ease;
     }
+
     nav {
-      background: #333;
       display: flex;
       justify-content: center;
+      background: #222;
+      padding: 10px;
+      flex-wrap: wrap;
     }
+
     nav a {
-      color: #fff;
-      padding: 15px 20px;
+      color: var(--text-light);
+      margin: 5px 15px;
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--text-light);
+      color: var(--primary);
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
       transition: background 0.3s;
     }
-    nav a:hover {
-      background: #575757;
+
+    .lang-switch:hover {
+      background: #eee;
     }
+
     section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
+      animation: fadeInUp 1s ease;
     }
+
     h2 {
-      color: #2575fc;
-      margin-bottom: 20px;
+      text-align: center;
+      color: var(--secondary);
+      margin-bottom: 30px;
     }
-    .projects {
+
+    .projects, .timeline {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
+
     .card {
       background: #fff;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
-    .card h3 {
-      margin-top: 0;
+
+    .card:hover {
+      transform: translateY(-5px);
     }
+
     footer {
-      background: #333;
-      color: #fff;
+      background: #222;
+      color: var(--text-light);
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 25px;
     }
+
     footer a {
-      color: #fff;
+      color: var(--text-light);
       margin: 0 10px;
       text-decoration: none;
     }
+
     footer a:hover {
-      text-decoration: underline;
+      color: var(--secondary);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Ayşegül Çağlı</h1>
-    <p>Computer Engineer | AI & Fullstack Enthusiast</p>
+    <h1 data-tr="Ayşegül Çağlı" data-en="Ayşegül Çağlı">Ayşegül Çağlı</h1>
+    <p data-tr="Bilgisayar Mühendisi | Yapay Zeka & Fullstack" 
+       data-en="Computer Engineer | AI & Fullstack Enthusiast">
+       Bilgisayar Mühendisi | Yapay Zeka & Fullstack
+    </p>
+    <button class="lang-switch" onclick="switchLang()">EN</button>
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+    <a href="#projects" data-tr="Projelerim" data-en="Projects">Projelerim</a>
+    <a href="#experience" data-tr="Çalışma Geçmişim" data-en="Experience">Çalışma Geçmişim</a>
+    <a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a>
   </nav>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm Ayşegül, a Computer Engineering graduate passionate about Artificial Intelligence, 
-      Machine Learning, and Fullstack Development. I enjoy creating innovative projects that 
-      combine AI with real-world applications.
+    <h2 data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+    <p data-tr="Merhaba! Ben Ayşegül, Yapay Zeka, Makine Öğrenmesi ve Fullstack Geliştirme konularına ilgi duyan bir bilgisayar mühendisiyim. Gerçek dünya problemlerini çözen yenilikçi projeler geliştirmeyi seviyorum."
+       data-en="Hi! I'm Ayşegül, a Computer Engineer passionate about AI, Machine Learning, and Fullstack Development. I enjoy building innovative projects that solve real-world problems.">
+       Merhaba! Ben Ayşegül, Yapay Zeka, Makine Öğrenmesi ve Fullstack Geliştirme konularına ilgi duyan bir bilgisayar mühendisiyim. 
     </p>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2 data-tr="Projelerim" data-en="Projects">Projelerim</h2>
     <div class="projects">
       <div class="card">
         <h3>AI Recommendation System</h3>
-        <p>
-          Developed an AI-based system that generates tailored business solutions 
-          and deployed it on AWS.
+        <p data-tr="Şirketler için yapay zeka tabanlı çözüm öneri sistemi geliştirdim ve AWS üzerinde dağıttım."
+           data-en="Developed an AI-based solution recommendation system for companies and deployed it on AWS.">
+           Şirketler için yapay zeka tabanlı çözüm öneri sistemi geliştirdim ve AWS üzerinde dağıttım.
         </p>
       </div>
       <div class="card">
         <h3>Portfolio Website</h3>
-        <p>
-          Designed and deployed my personal portfolio using GitHub Pages.
+        <p data-tr="Kendi portfolyo sitemi tasarlayıp GitHub Pages üzerinde yayınladım."
+           data-en="Designed and deployed my portfolio website on GitHub Pages.">
+           Kendi portfolyo sitemi tasarlayıp GitHub Pages üzerinde yayınladım.
         </p>
       </div>
       <div class="card">
         <h3>Chatbot Project</h3>
-        <p>
-          Fine-tuned a language model to create an intelligent chatbot for 
-          English language learning.
+        <p data-tr="İngilizce öğretimi için bir dil modeli ince ayarlayıp akıllı bir chatbot geliştirdim."
+           data-en="Fine-tuned a language model to create a smart chatbot for English learning.">
+           İngilizce öğretimi için bir dil modeli ince ayarlayıp akıllı bir chatbot geliştirdim.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 data-tr="Çalışma Geçmişim" data-en="Experience">Çalışma Geçmişim</h2>
+    <div class="timeline">
+      <div class="card">
+        <h3 data-tr="Crata AI - Erasmus Stajı (Barcelona)" data-en="Crata AI - Erasmus Internship (Barcelona)">Crata AI - Erasmus Stajı (Barcelona)</h3>
+        <p data-tr="AWS, Docker, HubSpot, Apollo.io ve GPT Assistant ile çalışarak yapay zeka projeleri geliştirdim."
+           data-en="Worked with AWS, Docker, HubSpot, Apollo.io, and GPT Assistant to build AI projects.">
+           AWS, Docker, HubSpot, Apollo.io ve GPT Assistant ile çalışarak yapay zeka projeleri geliştirdim.
+        </p>
+      </div>
+      <div class="card">
+        <h3 data-tr="Crata AI - Uzaktan Yaz Stajı" data-en="Crata AI - Remote Summer Internship">Crata AI - Uzaktan Yaz Stajı</h3>
+        <p data-tr="Serverless Framework ve AWS üzerinde proje planlama ve uygulama deneyimi kazandım."
+           data-en="Gained experience in project planning and implementation on Serverless Framework and AWS.">
+           Serverless Framework ve AWS üzerinde proje planlama ve uygulama deneyimi kazandım.
         </p>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2 data-tr="İletişim" data-en="Contact">İletişim</h2>
     <p>📧 Email: <a href="mailto:aysegulcagliofficial@gmail.com">aysegulcagliofficial@gmail.com</a></p>
     <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/aysegulcagli" target="_blank">linkedin.com/in/aysegulcagli</a></p>
     <p>🐙 GitHub: <a href="https://github.com/aysegulcagli" target="_blank">github.com/aysegulcagli</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Ayşegül Çağlı | Built with 💜 on GitHub Pages</p>
+    <p>© 2025 Ayşegül Çağlı | GitHub Pages</p>
   </footer>
 
+  <script>
+    let currentLang = "tr";
+    function switchLang() {
+      currentLang = currentLang === "tr" ? "en" : "tr";
+      document.querySelectorAll("[data-tr]").forEach(el => {
+        el.innerText = el.getAttribute(`data-${currentLang}`);
+      });
+      document.querySelector(".lang-switch").innerText = currentLang === "tr" ? "EN" : "TR";
+    }
+  </script>
 </body>
 </html>

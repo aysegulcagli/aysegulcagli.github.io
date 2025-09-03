@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" id="htmlLang">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayşegül Çağlı - AI & Full Stack Developer</title>
+    <title>Ayşegül Çağlı - Junior AI & Full Stack Developer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button class="lang-btn active" onclick="switchLanguage('tr')" data-lang="tr">TR</button>
+        <button class="lang-btn" onclick="switchLanguage('en')" data-lang="en">EN</button>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -16,12 +22,12 @@
                 <span class="logo-text">AÇ</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Ana Sayfa</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">Hakkımda</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">Yetenekler</a></li>
-                <li class="nav-item"><a href="#experience" class="nav-link">Deneyim</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Projeler</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">İletişim</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link" data-tr="Yetenekler" data-en="Skills">Yetenekler</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link" data-tr="Deneyim" data-en="Experience">Deneyim</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -37,16 +43,16 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        Merhaba, Ben <span class="highlight">Ayşegül Çağlı</span>
+                        <span data-tr="Merhaba, Ben " data-en="Hello, I'm ">Merhaba, Ben </span>
+                        <span class="highlight">Ayşegül Çağlı</span>
                     </h1>
-                    <h2 class="hero-subtitle">AI & Full Stack Developer</h2>
-                    <p class="hero-description">
-                        Yapay zeka ve makine öğrenmesi alanında uzmanlaşmış, modern web teknolojileri ile 
-                        end-to-end çözümler geliştiren tutkulu bir mühendis.
+                    <h2 class="hero-subtitle" data-tr="Junior AI & Full Stack Developer" data-en="Junior AI & Full Stack Developer">Junior AI & Full Stack Developer</h2>
+                    <p class="hero-description" data-tr="Yapay zeka ve makine öğrenmesi alanında uzmanlaşmış, modern web teknolojileri ile yenilikçi çözümler geliştirmeye odaklanmış yeni mezun bir bilgisayar mühendisi." data-en="A recent computer engineering graduate specializing in artificial intelligence and machine learning, focused on developing innovative solutions with modern web technologies.">
+                        Yapay zeka ve makine öğrenmesi alanında uzmanlaşmış, modern web teknolojileri ile yenilikçi çözümler geliştirmeye odaklanmış yeni mezun bir bilgisayar mühendisi.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">Projelerim</a>
-                        <a href="#contact" class="btn btn-outline">İletişime Geç</a>
+                        <a href="#projects" class="btn btn-primary" data-tr="Projelerim" data-en="My Projects">Projelerim</a>
+                        <a href="#contact" class="btn btn-outline" data-tr="İletişime Geç" data-en="Get in Touch">İletişime Geç</a>
                     </div>
                     <div class="social-links">
                         <a href="https://linkedin.com/in/aysegulcagli" target="_blank" class="social-link">
@@ -64,10 +70,10 @@
                     <div class="profile-card">
                         <div class="card-content">
                             <div class="card-icon">
-                                <i class="fas fa-robot"></i>
+                                <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <h3>AI Specialist</h3>
-                            <p>Machine Learning & Deep Learning</p>
+                            <h3 data-tr="Yeni Mezun" data-en="Fresh Graduate">Yeni Mezun</h3>
+                            <p data-tr="AI & Software Engineering" data-en="AI & Software Engineering">AI & Software Engineering</p>
                         </div>
                     </div>
                 </div>
@@ -82,20 +88,19 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Hakkımda</h2>
-                <p class="section-subtitle">Tutkulu bir AI geliştirici ve problem çözücü</p>
+                <h2 class="section-title" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+                <p class="section-subtitle" data-tr="Teknoloji tutkunu yeni mezun bilgisayar mühendisi" data-en="Technology-passionate fresh graduate computer engineer">Teknoloji tutkunu yeni mezun bilgisayar mühendisi</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        Aydın Adnan Menderes Üniversitesi Bilgisayar Mühendisliği bölümünden <strong>3.85/4.00 GPA</strong> 
-                        ile mezun oldum ve bölümümde <strong>2. sırada</strong> yer aldım. Yapay zeka, makine öğrenmesi ve 
-                        full-stack geliştirme alanlarında kendimi sürekli geliştiren bir mühendisim.
+                    <p data-tr="2025 yılında Aydın Adnan Menderes Üniversitesi Bilgisayar Mühendisliği bölümünden 3.85/4.00 GPA ile mezun oldum ve bölümümde 2. sırada yer aldım. Üniversite eğitimim boyunca yapay zeka, makine öğrenmesi ve full-stack geliştirme alanlarında kendimi geliştirdim." data-en="I graduated from Aydın Adnan Menderes University Computer Engineering department in 2025 with a 3.85/4.00 GPA, ranking 2nd in my department. Throughout my university education, I developed myself in artificial intelligence, machine learning, and full-stack development.">
+                        2025 yılında Aydın Adnan Menderes Üniversitesi Bilgisayar Mühendisliği bölümünden <strong>3.85/4.00 GPA</strong> 
+                        ile mezun oldum ve bölümümde <strong>2. sırada</strong> yer aldım. Üniversite eğitimim boyunca yapay zeka, makine öğrenmesi ve 
+                        full-stack geliştirme alanlarında kendimi geliştirdim.
                     </p>
-                    <p>
-                        Crata AI'da geliştirdiğim end-to-end AI tabanlı öneri sistemi gibi gerçek dünya projelerinde 
-                        deneyim kazandım. Python, JavaScript, React ve AWS teknolojilerini kullanarak ölçeklenebilir 
-                        çözümler üretiyorum.
+                    <p data-tr="Staj dönemlerimde Crata AI'da end-to-end AI tabanlı öneri sistemi geliştirdim ve gerçek dünya projelerinde deneyim kazandım. Teknoloji dünyasında kariyer yapmaya hazır, öğrenmeye açık bir mühendisim." data-en="During my internship periods, I developed end-to-end AI-based recommendation systems at Crata AI and gained experience in real-world projects. I'm a ready-to-learn engineer prepared to build a career in the technology world.">
+                        Staj dönemlerimde Crata AI'da end-to-end AI tabanlı öneri sistemi geliştirdim ve gerçek dünya projelerinde 
+                        deneyim kazandım. Teknoloji dünyasında kariyer yapmaya hazır, öğrenmeye açık bir mühendisim.
                     </p>
                     <div class="achievements">
                         <div class="achievement">
@@ -104,11 +109,11 @@
                         </div>
                         <div class="achievement">
                             <div class="achievement-number">2nd</div>
-                            <div class="achievement-text">Sıralama</div>
+                            <div class="achievement-text" data-tr="Sıralama" data-en="Ranking">Sıralama</div>
                         </div>
                         <div class="achievement">
-                            <div class="achievement-number">99.2%</div>
-                            <div class="achievement-text">Spell Checker Accuracy</div>
+                            <div class="achievement-number">2025</div>
+                            <div class="achievement-text" data-tr="Mezuniyet" data-en="Graduate">Mezuniyet</div>
                         </div>
                     </div>
                 </div>
@@ -117,7 +122,7 @@
                         <div class="floating-elements">
                             <div class="floating-element"><i class="fas fa-brain"></i></div>
                             <div class="floating-element"><i class="fas fa-code"></i></div>
-                            <div class="floating-element"><i class="fas fa-chart-line"></i></div>
+                            <div class="floating-element"><i class="fas fa-graduation-cap"></i></div>
                         </div>
                     </div>
                 </div>
@@ -129,14 +134,14 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Yeteneklerim</h2>
-                <p class="section-subtitle">Uzmanlaştığım teknolojiler ve araçlar</p>
+                <h2 class="section-title" data-tr="Yeteneklerim" data-en="My Skills">Yeteneklerim</h2>
+                <p class="section-subtitle" data-tr="Öğrendiğim teknolojiler ve araçlar" data-en="Technologies and tools I've learned">Öğrendiğim teknolojiler ve araçlar</p>
             </div>
             <div class="skills-content">
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-robot"></i>
-                        AI & Machine Learning
+                        <span data-tr="AI & Machine Learning" data-en="AI & Machine Learning">AI & Machine Learning</span>
                     </h3>
                     <div class="skills-grid">
                         <div class="skill-item">
@@ -161,7 +166,7 @@
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-code"></i>
-                        Programming Languages
+                        <span data-tr="Programlama Dilleri" data-en="Programming Languages">Programlama Dilleri</span>
                     </h3>
                     <div class="skills-grid">
                         <div class="skill-item">
@@ -186,7 +191,7 @@
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-layer-group"></i>
-                        Frameworks & Tools
+                        <span data-tr="Framework & Araçlar" data-en="Frameworks & Tools">Framework & Araçlar</span>
                     </h3>
                     <div class="skills-grid">
                         <div class="skill-item">
@@ -215,18 +220,20 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Deneyimlerim</h2>
-                <p class="section-subtitle">Profesyonel kariyer yolculuğum</p>
+                <h2 class="section-title" data-tr="Deneyimlerim" data-en="My Experience">Deneyimlerim</h2>
+                <p class="section-subtitle" data-tr="Stajlar ve çalışma deneyimlerim" data-en="Internships and work experience">Stajlar ve çalışma deneyimlerim</p>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">Mar 2025 - Haz 2025</div>
                     <div class="timeline-content">
-                        <h3>AI Full Stack Engineer</h3>
+                        <h3 data-tr="AI Full Stack Engineer (Erasmus+ Stajı)" data-en="AI Full Stack Engineer (Erasmus+ Internship)">AI Full Stack Engineer (Erasmus+ Stajı)</h3>
                         <h4>Crata AI - Barcelona, İspanya</h4>
-                        <p>End-to-end AI tabanlı öneri sistemi geliştirdim. Frontend ve backend'i sıfırdan inşa ederek, 
-                        OpenAI API entegrasyonu ile işletmelere özel çözümler sundum. AWS Amplify üzerinde canlıya taşıdım.</p>
+                        <p data-tr="İki kişilik ekipte end-to-end AI tabanlı öneri sistemi geliştirdim. Frontend ve backend'i sıfırdan inşa ederek OpenAI API entegrasyonu yaptım. Sistemi AWS Amplify üzerinde canlıya taşıdım." data-en="Developed end-to-end AI-based recommendation system in a two-person team. Built frontend and backend from scratch with OpenAI API integration. Deployed the system live on AWS Amplify.">
+                            İki kişilik ekipte end-to-end AI tabanlı öneri sistemi geliştirdim. Frontend ve backend'i sıfırdan inşa ederek 
+                            OpenAI API entegrasyonu yaptım. Sistemi AWS Amplify üzerinde canlıya taşıdım.
+                        </p>
                         <div class="tags">
                             <span class="tag">Python</span>
                             <span class="tag">JavaScript</span>
@@ -241,10 +248,12 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">Haz 2024 - Eyl 2024</div>
                     <div class="timeline-content">
-                        <h3>AI Engineer Intern</h3>
+                        <h3 data-tr="AI Engineer Stajyeri" data-en="AI Engineer Intern">AI Engineer Stajyeri</h3>
                         <h4>Crata AI - Remote</h4>
-                        <p>Yapay zeka ve veri entegrasyonu projelerinde otomasyon deneyimi kazandım. 
-                        AWS Lambda, EC2 ve Docker ile bulut tabanlı çözümler geliştirdim.</p>
+                        <p data-tr="Yapay zeka ve veri entegrasyonu projelerinde deneyim kazandım. AWS Lambda, EC2 ve Docker ile bulut teknolojilerini öğrendim. HubSpot ve Apollo.io entegrasyonları yaptım." data-en="Gained experience in artificial intelligence and data integration projects. Learned cloud technologies with AWS Lambda, EC2, and Docker. Implemented HubSpot and Apollo.io integrations.">
+                            Yapay zeka ve veri entegrasyonu projelerinde deneyim kazandım. AWS Lambda, EC2 ve Docker ile bulut 
+                            teknolojilerini öğrendim. HubSpot ve Apollo.io entegrasyonları yaptım.
+                        </p>
                         <div class="tags">
                             <span class="tag">AWS Lambda</span>
                             <span class="tag">Docker</span>
@@ -258,14 +267,35 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">Eyl 2023 - Mar 2024</div>
                     <div class="timeline-content">
-                        <h3>Computer Engineer / R&D</h3>
+                        <h3 data-tr="Araştırma & Geliştirme Stajyeri" data-en="Research & Development Intern">Araştırma & Geliştirme Stajyeri</h3>
                         <h4>DDI Teknoloji - Remote</h4>
-                        <p>AI ve Generative AI projelerinde Ar-Ge çalışmaları yaptım. 
-                        Yazılım geliştirme ve AI özelliklerinin prototiplenmesine katkıda bulundum.</p>
+                        <p data-tr="AI ve Generative AI projelerinde Ar-Ge çalışmalarına katıldım. Yazılım geliştirme süreçlerini öğrendim ve proje yönetimi deneyimi kazandım." data-en="Participated in R&D studies on AI and Generative AI projects. Learned software development processes and gained project management experience.">
+                            AI ve Generative AI projelerinde Ar-Ge çalışmalarına katıldım. Yazılım geliştirme süreçlerini 
+                            öğrendim ve proje yönetimi deneyimi kazandım.
+                        </p>
                         <div class="tags">
                             <span class="tag">Generative AI</span>
                             <span class="tag">R&D</span>
                             <span class="tag">Microsoft Project</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Haz 2023 - Ağu 2023</div>
+                    <div class="timeline-content">
+                        <h3 data-tr="Üniversite Stajı" data-en="University Internship">Üniversite Stajı</h3>
+                        <h4 data-tr="Aydın Adnan Menderes Üniversitesi" data-en="Aydın Adnan Menderes University">Aydın Adnan Menderes Üniversitesi</h4>
+                        <p data-tr="Üç kişilik ekipte %99.2 doğruluğa sahip Türkçe yazım denetleyici geliştirdim. NLP teknikleri ve Word2Vec modellemesi öğrendim. Araştırma makalesi yayınladım." data-en="Developed Turkish spell checker with 99.2% accuracy in a three-person team. Learned NLP techniques and Word2Vec modeling. Published research paper.">
+                            Üç kişilik ekipte %99.2 doğruluğa sahip Türkçe yazım denetleyici geliştirdim. 
+                            NLP teknikleri ve Word2Vec modellemesi öğrendim. Araştırma makalesi yayınladım.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Word2Vec</span>
+                            <span class="tag">Research</span>
                         </div>
                     </div>
                 </div>
@@ -277,8 +307,8 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Projelerim</h2>
-                <p class="section-subtitle">Öne çıkan çalışmalarım ve akademik projelerim</p>
+                <h2 class="section-title" data-tr="Projelerim" data-en="My Projects">Projelerim</h2>
+                <p class="section-subtitle" data-tr="Öne çıkan akademik ve staj projelerim" data-en="Featured academic and internship projects">Öne çıkan akademik ve staj projelerim</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
@@ -286,10 +316,10 @@
                         <div class="project-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3>AI Recommendation System</h3>
+                        <h3 data-tr="AI Öneri Sistemi" data-en="AI Recommendation System">AI Öneri Sistemi</h3>
                     </div>
-                    <p class="project-description">
-                        Crata AI için geliştirdiğim end-to-end yapay zeka tabanlı öneri sistemi. 
+                    <p class="project-description" data-tr="Crata AI stajında geliştirdiğim end-to-end yapay zeka tabanlı öneri sistemi. İşletmelere özel çözümler sunan ve AWS üzerinde canlı olarak çalışan platform." data-en="End-to-end AI-based recommendation system developed during my internship at Crata AI. Platform that offers business-specific solutions and runs live on AWS.">
+                        Crata AI stajında geliştirdiğim end-to-end yapay zeka tabanlı öneri sistemi. 
                         İşletmelere özel çözümler sunan ve AWS üzerinde canlı olarak çalışan platform.
                     </p>
                     <div class="project-tags">
@@ -301,7 +331,7 @@
                     <div class="project-links">
                         <a href="#" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
-                            Demo
+                            <span data-tr="Demo" data-en="Demo">Demo</span>
                         </a>
                     </div>
                 </div>
@@ -311,10 +341,10 @@
                         <div class="project-icon">
                             <i class="fas fa-spell-check"></i>
                         </div>
-                        <h3>Turkish Spell Checker</h3>
+                        <h3 data-tr="Türkçe Yazım Denetleyici" data-en="Turkish Spell Checker">Türkçe Yazım Denetleyici</h3>
                     </div>
-                    <p class="project-description">
-                        %99.2 benchmark doğruluğuna sahip Türkçe yazım denetleyici. 
+                    <p class="project-description" data-tr="Üniversite stajında geliştirdiğim %99.2 benchmark doğruluğuna sahip Türkçe yazım denetleyici. Uzaklık algoritmaları ve NLP teknikleri kullanarak geliştirildi." data-en="Turkish spell checker with 99.2% benchmark accuracy developed during university internship. Developed using distance algorithms and NLP techniques.">
+                        Üniversite stajında geliştirdiğim %99.2 benchmark doğruluğuna sahip Türkçe yazım denetleyici. 
                         Uzaklık algoritmaları ve NLP teknikleri kullanarak geliştirildi.
                     </p>
                     <div class="project-tags">
@@ -330,7 +360,7 @@
                         </a>
                         <a href="#" class="project-link">
                             <i class="fas fa-file-pdf"></i>
-                            Paper
+                            <span data-tr="Makale" data-en="Paper">Makale</span>
                         </a>
                     </div>
                 </div>
@@ -340,11 +370,10 @@
                         <div class="project-icon">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <h3>English Teaching Chatbot</h3>
+                        <h3 data-tr="İngilizce Öğretim Chatbotu" data-en="English Teaching Chatbot">İngilizce Öğretim Chatbotu</h3>
                     </div>
-                    <p class="project-description">
-                        Derin öğrenme tabanlı İngilizce öğretim chatbotu. 
-                        Lisans tezi olarak geliştirilen kişiselleştirilmiş öğrenme deneyimi sunan sistem.
+                    <p class="project-description" data-tr="Lisans tezi projem. Derin öğrenme tabanlı kişiselleştirilmiş İngilizce öğrenme deneyimi sunan chatbot sistemi." data-en="My bachelor's thesis project. Deep learning-based chatbot system providing personalized English learning experience.">
+                        Lisans tezi projem. Derin öğrenme tabanlı kişiselleştirilmiş İngilizce öğrenme deneyimi sunan chatbot sistemi.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Deep Learning</span>
@@ -365,11 +394,11 @@
                         <div class="project-icon">
                             <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3>Human Intelligence Modeling</h3>
+                        <h3 data-tr="İnsan Zekası Modelleme" data-en="Human Intelligence Modeling">İnsan Zekası Modelleme</h3>
                     </div>
-                    <p class="project-description">
-                        İnsan zekasının modellenmesi ile yapay zeka sistemlerinin geliştirilmesi üzerine 
-                        araştırma projesi. İkinci lisans tezi çalışmam.
+                    <p class="project-description" data-tr="İkinci lisans tezi çalışmam. İnsan zekasının modellenmesi ile yapay zeka sistemlerinin geliştirilmesi üzerine araştırma projesi." data-en="My second bachelor's thesis. Research project on developing artificial intelligence systems through modeling human intelligence.">
+                        İkinci lisans tezi çalışmam. İnsan zekasının modellenmesi ile yapay zeka sistemlerinin 
+                        geliştirilmesi üzerine araştırma projesi.
                     </p>
                     <div class="project-tags">
                         <span class="tag">AI Research</span>
@@ -380,7 +409,7 @@
                     <div class="project-links">
                         <a href="#" class="project-link">
                             <i class="fas fa-book"></i>
-                            Thesis
+                            <span data-tr="Tez" data-en="Thesis">Tez</span>
                         </a>
                     </div>
                 </div>
@@ -392,11 +421,11 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">İletişime Geçin</h2>
-                <p class="section-subtitle">Birlikte harika projeler geliştirelim</p>
+                <h2 class="section-title" data-tr="İletişime Geçin" data-en="Get in Touch">İletişime Geçin</h2>
+                <p class="section-subtitle" data-tr="İş fırsatları ve işbirliği için benimle iletişime geçebilirsiniz" data-en="You can contact me for job opportunities and collaborations">İş fırsatları ve işbirliği için benimle iletişime geçebilirsiniz</p>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
+            <div class="contact-content-simple">
+                <div class="contact-grid">
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
@@ -404,6 +433,7 @@
                         <div class="contact-details">
                             <h4>Email</h4>
                             <p>aysegulcagliofficial@gmail.com</p>
+                            <a href="mailto:aysegulcagliofficial@gmail.com" class="contact-link" data-tr="Email Gönder" data-en="Send Email">Email Gönder</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -411,8 +441,19 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>Telefon</h4>
+                            <h4 data-tr="Telefon" data-en="Phone">Telefon</h4>
                             <p>+90 535 379 38 70</p>
+                            <a href="tel:+905353793870" class="contact-link" data-tr="Ara" data-en="Call">Ara</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/aysegulcagli</p>
+                            <a href="https://linkedin.com/in/aysegulcagli" target="_blank" class="contact-link" data-tr="Profil" data-en="Profile">Profil</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -420,30 +461,11 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>Konum</h4>
+                            <h4 data-tr="Konum" data-en="Location">Konum</h4>
                             <p>Istanbul, Turkey</p>
+                            <span class="availability" data-tr="İş fırsatlarına açık" data-en="Open to opportunities">İş fırsatlarına açık</span>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Adınız" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Email Adresiniz" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Konu" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Mesajınız" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Mesaj Gönder
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -454,7 +476,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2025 Ayşegül Çağlı. Tüm hakları saklıdır.</p>
+                    <p data-tr="&copy; 2025 Ayşegül Çağlı. Tüm hakları saklıdır." data-en="&copy; 2025 Ayşegül Çağlı. All rights reserved.">&copy; 2025 Ayşegül Çağlı. Tüm hakları saklıdır.</p>
                 </div>
                 <div class="footer-social">
                     <a href="https://linkedin.com/in/aysegulcagli" target="_blank" class="social-link">

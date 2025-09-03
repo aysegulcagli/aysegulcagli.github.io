@@ -250,3 +250,61 @@ loadingStyle.textContent = `
     }
 `;
 document.head.appendChild(loadingStyle);
+
+// Language switching functionality
+let currentLang = 'tr';
+
+function switchLanguage(lang) {
+    currentLang = lang;
+    
+    // Update button states
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Update HTML lang attribute
+    document.getElementById('htmlLang').setAttribute('lang', lang);
+    
+    // Update all translatable elements
+    document.querySelectorAll('[data-tr]').forEach(element => {
+        const trText = element.getAttribute('data-tr');
+        const enText = element.getAttribute('data-en');
+        
+        if (lang === 'tr') {
+            if (element.innerHTML.includes('<')) {
+                // Handle HTML content
+                element.innerHTML = trText;
+            } else {
+                element.textContent = trText;
+            }
+        } else {
+            if (element.innerHTML.includes('<')) {
+                // Handle HTML content  
+                element.innerHTML = enText;
+            } else {
+                element.textContent = enText;
+            }
+        }
+    });
+    
+    // Update page title
+    if (lang === 'tr') {
+        document.title = 'Ayşegül Çağlı - Junior AI & Full Stack Developer';
+    } else {
+        document.title = 'Ayşegül Çağlı - Junior AI & Full Stack Developer';
+    }
+    
+    // Save language preference
+    localStorage.setItem('preferred-language', lang);
+}
+
+// Load saved language preference
+window.addEventListener('load', () => {
+    const savedLang = localStorage.getItem('preferred-language') || 'tr';
+    if (savedLang !== 'tr') {
+        switchLanguage(savedLang);
+    }
+});
